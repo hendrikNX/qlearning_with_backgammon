@@ -7,11 +7,48 @@ name = "backgammon-qlearning"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "gymnasium" },
     { name = "numpy" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "numpy", specifier = ">=2.3.0" }]
+requires-dist = [
+    { name = "gymnasium", specifier = ">=1.1.1" },
+    { name = "numpy", specifier = ">=2.3.0" },
+]
+
+[[package]]
+name = "cloudpickle"
+version = "3.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/52/39/069100b84d7418bc358d81669d5748efb14b9cceacd2f9c75f550424132f/cloudpickle-3.1.1.tar.gz", hash = "sha256:b216fa8ae4019d5482a8ac3c95d8f6346115d8835911fd4aefd1a445e4242c64", size = 22113 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7e/e8/64c37fadfc2816a7701fa8a6ed8d87327c7d54eacfbfb6edab14a2f2be75/cloudpickle-3.1.1-py3-none-any.whl", hash = "sha256:c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e", size = 20992 },
+]
+
+[[package]]
+name = "farama-notifications"
+version = "0.0.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2e/2c/8384832b7a6b1fd6ba95bbdcae26e7137bb3eedc955c42fd5cdcc086cfbf/Farama-Notifications-0.0.4.tar.gz", hash = "sha256:13fceff2d14314cf80703c8266462ebf3733c7d165336eee998fc58e545efd18", size = 2131 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/2c/ffc08c54c05cdce6fbed2aeebc46348dbe180c6d2c541c7af7ba0aa5f5f8/Farama_Notifications-0.0.4-py3-none-any.whl", hash = "sha256:14de931035a41961f7c056361dc7f980762a143d05791ef5794a751a2caf05ae", size = 2511 },
+]
+
+[[package]]
+name = "gymnasium"
+version = "1.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cloudpickle" },
+    { name = "farama-notifications" },
+    { name = "numpy" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/90/69/70cd29e9fc4953d013b15981ee71d4c9ef4d8b2183e6ef2fe89756746dce/gymnasium-1.1.1.tar.gz", hash = "sha256:8bd9ea9bdef32c950a444ff36afc785e1d81051ec32d30435058953c20d2456d", size = 829326 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f9/68/2bdc7b46b5f543dd865575f9d19716866bdb76e50dd33b71ed1a3dd8bb42/gymnasium-1.1.1-py3-none-any.whl", hash = "sha256:9c167ec0a2b388666e37f63b2849cd2552f7f5b71938574c637bb36487eb928a", size = 965410 },
+]
 
 [[package]]
 name = "numpy"
@@ -52,4 +89,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/0e/1e/7a9d98c886d4c39a2b4d3a7c026bffcf8fbcaf518782132d12a301cfc47a/numpy-2.3.0-cp313-cp313t-win32.whl", hash = "sha256:48a2e8eaf76364c32a1feaa60d6925eaf32ed7a040183b807e02674305beef61", size = 6438632 },
     { url = "https://files.pythonhosted.org/packages/fe/ab/66fc909931d5eb230107d016861824f335ae2c0533f422e654e5ff556784/numpy-2.3.0-cp313-cp313t-win_amd64.whl", hash = "sha256:ba17f93a94e503551f154de210e4d50c5e3ee20f7e7a1b5f6ce3f22d419b93bb", size = 12868491 },
     { url = "https://files.pythonhosted.org/packages/ee/e8/2c8a1c9e34d6f6d600c83d5ce5b71646c32a13f34ca5c518cc060639841c/numpy-2.3.0-cp313-cp313t-win_arm64.whl", hash = "sha256:f14e016d9409680959691c109be98c436c6249eaf7f118b424679793607b5944", size = 9935345 },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.14.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz", hash = "sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4", size = 107423 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/e0/552843e0d356fbb5256d21449fa957fa4eff3bbc135a74a691ee70c7c5da/typing_extensions-4.14.0-py3-none-any.whl", hash = "sha256:a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af", size = 43839 },
 ]
